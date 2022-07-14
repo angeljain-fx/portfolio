@@ -1,0 +1,111 @@
+@media (max-width: 760px) {
+  .my-outro {
+    margin: -8px 0px 30px 0px;
+  }
+  .footer-container {
+    box-sizing: border-box;
+    padding: 40px 20px;
+  }
+  .footer-inner-container {
+    flex-direction: column;
+    align-items: flex-start !important;
+  }
+  .signing-off {
+    text-align: center;
+  }
+  .footer-divider {
+    margin-top: 30px !important;
+  }
+}
+@media (min-width: 760px) {
+}
+
+.footer-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  min-height: 300px;
+  background-color: #0f0f0f;
+  box-shadow: 0px 10px -15px 0px rgba(0, 0, 0, 1);
+}
+
+.footer-inner-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+  min-height: 200px;
+}
+
+.my-name-footer {
+  font-family: "Quicksand", sans-serif;
+  color: white;
+  font-size: 26px;
+}
+
+.footer-logo-main-container {
+  width: 190px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.my-image-footer {
+  width: 45px;
+  height: 45px;
+  border-radius: 45px;
+  border: 3px solid #0085ff;
+}
+
+.my-outro {
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 16px;
+  color: white;
+}
+
+.footer-useful {
+  font-family: "Quicksand", sans-serif;
+  font-size: 26px;
+  color: white;
+  margin: 0px;
+}
+
+.footer-right-container {
+}
+
+.fa-footer-mod {
+  color: white;
+  font-size: 18px;
+}
+
+.footer-link-box {
+  width: 35px;
+  height: 35px;
+  background-color: #000;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 54px 55px,
+    rgba(0, 0, 0, 0.4) 0px -12px 30px, rgba(0, 0, 0, 0.4) 0px 4px 6px,
+    rgba(0, 0, 0, 0.4) 0px 12px 13px, rgba(0, 0, 0, 0.4) 0px -3px 5px;
+}
+
+.footer-links-container {
+  width: 250px;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 25px;
+}
+
+.footer-divider {
+  width: 80%;
+}
+
+.signing-off {
+  font-family: "Quicksand", sans-serif;
+  color: white;
+  font-size: 16px;
+}
