@@ -32,6 +32,9 @@
 }
 
 @media (min-width: 580px) and (max-width: 991px) {
+  .stack-icon-container-home {
+    display: none !important;
+  }
   .home-stretch {
     padding: 50px 10px;
     box-sizing: border-box;
@@ -64,6 +67,9 @@
 }
 
 @media (min-width: 991px) and (max-width: 1300px) {
+  .stack-icon-container-home {
+    display: none !important;
+  }
   .home-main-inner-container {
     width: 95%;
   }
@@ -86,6 +92,9 @@
 }
 
 @media (min-width: 1300px) {
+  .stack-icon-container-home {
+    display: none !important;
+  }
   .home-main-inner-container {
     width: 1250px;
   }
@@ -275,6 +284,7 @@
 }
 
 .home-right-background {
+  background-image: url("../assets/replacebg.svg");
   display: flex;
   justify-content: space-between;
   align-items: center;
