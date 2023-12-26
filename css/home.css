@@ -70,9 +70,15 @@
   .home-stretch {
     background-image: url("../assets/bg.svg");
   }
+  #name-break {
+    display: none;
+  }
 }
 
 @media (min-width: 991px) and (max-width: 1300px) {
+  #name-break {
+    display: none;
+  }
   .stack-icon-container-home {
     display: none !important;
   }
@@ -98,6 +104,9 @@
 }
 
 @media (min-width: 1300px) {
+  #name-break {
+    display: none;
+  }
   .stack-icon-container-home {
     display: none !important;
   }
