@@ -60,4 +60,4 @@ const intId = setInterval(() => {
     arr[i]();
     i++;
   }
-}, 2000);
+}, 2500);
