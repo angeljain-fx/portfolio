@@ -160,7 +160,7 @@
 .pixperfect-container {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: center; 
   box-sizing: border-box;
   min-height: 400px;
   background-color: white;
@@ -169,7 +169,23 @@
     rgba(0, 0, 0, 0.1) 0px 30px 60px -30px;
 }
 
+@media (max-width: 576px) {
+  .pixperfect-svg {
+    width: 285px;
+    height: 195px;
+  }
+}
+
+@media (min-width: 576px) {
+  .pixperfect-svg {
+    width: 400px;
+    height: 300px;
+  }
+}
+
 .pixperfect-svg {
+  flex-shrink: 0;
+  object-fit: cover;
   border-radius: 32.5px;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
     rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
