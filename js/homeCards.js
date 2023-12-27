@@ -1,63 +1,59 @@
-$("#hc2").hide();
-$("#hc3").hide();
-$("#hc4").hide();
+const cards = ["#hc1", "#hc2", "#hc3", "#hc4"];
 
-const showCard1 = () => {
-  $("#hc2").fadeOut();
-  $("#hc3").fadeOut();
-  $("#hc4").fadeOut();
-  $("#hc1").fadeIn();
-} 
-const showCard2 = () => {
-  $("#hc1").fadeOut();
-  $("#hc3").fadeOut();
-  $("#hc4").fadeOut();
-  $("#hc2").fadeIn();
-} 
-const showCard3 = () => {
-  $("#hc1").fadeOut();
-  $("#hc2").fadeOut();
-  $("#hc4").fadeOut();
-  $("#hc3").fadeIn();
-} 
-const showCard4 = () => {
-  $("#hc1").fadeOut();
-  $("#hc2").fadeOut();
-  $("#hc3").fadeOut();
-  $("#hc4").fadeIn();
-} 
+for(let i = 1; i < cards.length; i++) {
+  $(cards[i]).hide();
+}
 
-$(".num1").click(function () {
-  clearInterval(intId);
-  showCard1();
-});
-
-$(".num2").click(function () {
-  clearInterval(intId);
-  showCard2();
-});
-
-$(".num3").click(function () {
-  clearInterval(intId);
-  showCard3();
-});
-
-$(".num4").click(function () {
-  clearInterval(intId);
-  showCard4();
-});
-
-const arr = [showCard1, showCard2, showCard3, showCard4];
+const active = [];
 
 let i = 1;
 const intId = setInterval(() => {
   if(i === 3) {
-    arr[i]();
+    $(cards[i-1]).fadeOut();
+    active.pop();
+    $(cards[i]).fadeIn();
+    active.push("#hc" + (i+1));
+    console.log(active);
     i = 0;
+  } 
+  else if(i === 0) {
+    $(cards[cards.length-1]).fadeOut();
+    active.pop();
+    $(cards[i]).fadeIn();
+    active.push("#hc" + (i+1));
+    console.log(active);
+    i++;
   }
-  
   else {
-    arr[i]();
+    $(cards[i-1]).fadeOut();
+    active.pop();
+    $(cards[i]).fadeIn();
+    active.push("#hc" + (i+1));
+    console.log(active);
     i++;
   }
 }, 2500);
+
+const handleCardOnClick = (id) => {
+  let el = "#hc" + id;
+
+  if(el === active[0]) {
+    return;
+  }
+
+  $(active[0]).fadeOut();
+  active.pop();
+  $(el).fadeIn();
+  active.push(el);
+}
+
+const navigateCards = (cardId) => {
+  clearInterval(intId);
+  handleCardOnClick(cardId);
+}
+
+$(".num1").click(() => navigateCards(1));
+$(".num2").click(() => navigateCards(2));
+$(".num3").click(() => navigateCards(3));
+$(".num4").click(() => navigateCards(4));
+
