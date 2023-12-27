@@ -7,32 +7,36 @@ for(let i = 1; i < cards.length; i++) {
 const active = [];
 
 let i = 1;
-const intId = setInterval(() => {
-  if(i === 3) {
-    $(cards[i-1]).fadeOut();
-    active.pop();
-    $(cards[i]).fadeIn();
-    active.push("#hc" + (i+1));
-    console.log(active);
-    i = 0;
-  } 
-  else if(i === 0) {
-    $(cards[cards.length-1]).fadeOut();
-    active.pop();
-    $(cards[i]).fadeIn();
-    active.push("#hc" + (i+1));
-    console.log(active);
-    i++;
-  }
-  else {
-    $(cards[i-1]).fadeOut();
-    active.pop();
-    $(cards[i]).fadeIn();
-    active.push("#hc" + (i+1));
-    console.log(active);
-    i++;
-  }
-}, 2500);
+
+const handleActive = (i) => {
+  active.pop();
+  active.push("#hc" + (i+1));
+}
+
+const startInterval = () => {
+  return setInterval(() => {
+    if(i === 3) {
+      $(cards[i-1]).fadeOut();
+      $(cards[i]).fadeIn();
+      handleActive(i);
+      i = 0;
+    } 
+    else if(i === 0) {
+      $(cards[cards.length-1]).fadeOut();
+      $(cards[i]).fadeIn();
+      handleActive(i);
+      i++;
+    }
+    else {
+      $(cards[i-1]).fadeOut();
+      $(cards[i]).fadeIn();
+      handleActive(i);
+      i++;
+    }
+  }, 2500);
+}
+
+const intId = startInterval();
 
 const handleCardOnClick = (id) => {
   let el = "#hc" + id;

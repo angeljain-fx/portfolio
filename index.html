@@ -12,13 +12,7 @@
     />
     <link rel="icon" href="assets/angelico.png" />
     <link rel="apple-touch-icon" href="assets/angelico.png" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
-      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./css/nav.css" />
     <link rel="stylesheet" href="./css/index.css" />
     <link rel="stylesheet" href="./css/home.css" />
@@ -32,9 +26,9 @@
       integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
       crossorigin="anonymous"
     ></script>
-    <script defer src="./js/hamburger.js"></script>
     <script defer src="./js/homeCards.js"></script>
     <script defer src="./js/animations.js"></script>
+    <script defer src="./js/misc.js"></script>
     <title>Angel Jain | Portfolio</title>
   </head>
   <body>
@@ -116,12 +110,12 @@
             that leads to the success of overall product.
           </p>
           <div class="home-new-btn-container">
-            <a href="mailto:angeljain.fx@gmail.com" class="home-contact-me"
+            <a href="mailto:angeljain.fx@gmail.com" class="home-contact-me" id="contact-me-btn"
             >Contact Me <i class="fa-solid fa-paper-plane"></i
             ></a>
             <a download href="./assets/resume.pdf" class="home-resume-btn">
-              Download Resume
-              <i class="fa-solid fa-file-arrow-down"></i>
+              View Resume
+              <i class="fa-regular fa-file-pdf"></i>
             </a>
           </div>
           <div class="social-home-container">
@@ -425,7 +419,7 @@
       </h1>
       <p class="about-me-intro-line" data-aos="zoom-in-up">
         Here you will find more information about me, what I do, and my current
-        skills mostly in terms of programming and technology.
+        skills mostly in terms of designing, programming and technology.
       </p>
       <div class="about-main-inner-container">
         <div class="about-inner-left-container" data-aos="fade">
@@ -434,12 +428,12 @@
             <p class="know-me-completely">
               I am a Full-Stack Web Developer with a flair for creating elegant
               solutions in the least amount of time. Check out some of my work
-              in the Projects Section.
+              in the <span style="text-decoration: underline; cursor: pointer;" id="nav-to-projects">Projects Section</span>.
             </p>
             <p class="know-me-completely">
               I have developed a full-stack solution for a Design Agency
               allowing their customers to place orders and make payments, A
-              Furniture E-Commerce web app, and a high-converting Landing Page
+              MERN Stack Construction E-Commerce web app, and a high-converting Landing Page
               for another agency. Apart from that, I'm really passionate about
               learning new web development technologies to create more
               real-world applications.
@@ -447,12 +441,13 @@
             <p class="know-me-completely">
               I'm open to job opportunities where I can contribute, learn and
               grow. If you have an excellent opportunity matching my skills and
-              experience, don't hesitate to contact me on LinkedIn.
+              experience, don't hesitate to contact me on LinkedIn or click below ⬇️
             </p>
           </div>
           <a
             href="mailto:angeljain.fx@gmail.com"
             class="home-contact-me about-contact-me"
+            id="contact-me-btn"
             >Contact Me <i class="fa-solid fa-paper-plane"></i
           ></a>
         </div>
@@ -598,8 +593,8 @@
               </div>
             </div>
             <a download href="./assets/resume.pdf" class="download-cv">
-              Download Resume
-              <i class="fa-solid fa-file-arrow-down"></i>
+              View Resume
+              <i class="fa-regular fa-file-pdf" style="margin-top: 2px;"></i>
             </a>
           </div>
         </div>
@@ -727,7 +722,7 @@
     <!--Projects-->
 
     <!--Contact Me-->
-    <div class="contact-container">
+    <div class="contact-container" id="contact-container">
       <div class="contact-inner-container">
         <div class="contact-left-inner-container" data-aos="fade">
           <h2 class="contact-head">

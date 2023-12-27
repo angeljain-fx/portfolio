@@ -400,18 +400,27 @@
   align-items: center;
   width: 250px;
   height: 50px;
+  border: 3.5px solid #f88031;
+  box-sizing: border-box;
+  background-color: #f88031;
   border-radius: 45px;
-  background-color: #ffcf00;
   color: white;
   font-family: "Quicksand", sans-serif;
   font-size: 18px;
   font-weight: 600;
   margin: 50px auto 0px auto;
-  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
-    rgba(0, 0, 0, 0.22) 0px 15px 12px;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+  position: relative;
+  top: 0px;
+  transition: 0.2s all ease-in-out;
 }
 
-.fa-file-arrow-down {
-  margin-left: 10px;
-  font-size: 16px;
+.download-cv:hover {
+  background-color: #fff;
+  color: #f88031;
+  transition: 0.2s all ease-in-out;
+  position: relative;
+  top: -5px;
+  box-shadow: rgba(0, 0, 0, 0.26) 0px 10px 45px 0px,
+    rgba(0, 0, 0, 0.06) 0px 0px 10px 1px;
 }
